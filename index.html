@@ -5,38 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LedgerPilot 🚀</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
-<body class="bg-gray-900 text-white min-h-screen flex items-center justify-center px-6">
-  <div id="root"></div>
+<body class="bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white min-h-screen flex flex-col items-center justify-center px-6">
+  <h1 class="text-5xl font-bold mb-4 text-center">LedgerPilot 🚀</h1>
+  <p class="text-gray-300 text-center mb-8 max-w-xl">
+    AI-powered bookkeeping co-pilot. Track income, expenses & taxes in one place and save hours every week.
+  </p>
 
-  <script type="text/babel">
-    const { useState } = React;
-    function App() {
-      const [email, setEmail] = useState("");
-      const handleJoin = e => {
-        e.preventDefault();
-        if (!email) { alert("Enter your email 🙂"); return; }
-        alert("Thanks! You’re on the waitlist: " + email);
-        setEmail("");
-      };
+  <!-- Simple Waitlist Form -->
+  <form class="flex flex-col sm:flex-row gap-3 justify-center mb-6" onsubmit="alert('Thanks! You’re on the waitlist.'); return false;">
+    <input type="email" placeholder="Work email" class="px-4 py-3 rounded-xl text-black w-full sm:w-80" required />
+    <button type="submit" class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700">Join Waitlist</button>
+  </form>
 
-      return (
-        <div className="text-center max-w-3xl mx-auto">
-          <h1 className="text-5xl font-bold mb-4">LedgerPilot 🚀</h1>
-          <p className="text-gray-300 mb-8">
-            AI bookkeeping co-pilot. Track income, expenses & taxes in one place.
-          </p>
-          <form onSubmit={handleJoin} className="flex flex-col sm:flex-row gap-3 justify-center mb-6">
-            <input type="email" value={email} onChange={e=>setEmail(e.target.value)} placeholder="Work email" className="px-4 py-3 rounded-xl text-black w-full sm:w-80" required />
-            <button className="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700">Join Waitlist</button>
-          </form>
-        </div>
-      );
-    }
-    ReactDOM.createRoot(document.getElementById("root")).render(<App />);
-  </script>
+  <div class="text-gray-400 text-sm mb-16 text-center">No spam. 1–2 emails/month with updates.</div>
+
+  <!-- Features -->
+  <div class="grid md:grid-cols-3 gap-6 max-w-5xl w-full">
+    <div class="rounded-2xl bg-white/5 border border-white/10 p-6">
+      <h3 class="text-xl font-semibold">Auto-reconcile & file</h3>
+      <p class="mt-2 text-gray-300">Bank feeds, invoice matching, one-click GST/e-invoice export.</p>
+    </div>
+    <div class="rounded-2xl bg-white/5 border border-white/10 p-6">
+      <h3 class="text-xl font-semibold">AI document intake</h3>
+      <p class="mt-2 text-gray-300">Parse PDFs & scans. Extract line items automatically.</p>
+    </div>
+    <div class="rounded-2xl bg-white/5 border border-white/10 p-6">
+      <h3 class="text-xl font-semibold">Close faster</h3>
+      <p class="mt-2 text-gray-300">Variance explainers, journal suggestions, month-end checklists.</p>
+    </div>
+  </div>
+
+  <footer class="mt-16 text-gray-400 text-sm text-center">© 2025 LedgerPilot — All rights reserved.</footer>
 </body>
 </html>
