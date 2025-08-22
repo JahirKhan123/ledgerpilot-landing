@@ -2,40 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>LedgerPilot 🚀</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white min-h-screen flex flex-col items-center justify-center px-6">
-  <h1 class="text-5xl font-bold mb-4 text-center">LedgerPilot 🚀</h1>
-  <p class="text-gray-300 text-center mb-8 max-w-xl">
-    AI-powered bookkeeping co-pilot. Track income, expenses & taxes in one place and save hours every week.
+<body class="bg-gray-900 text-white min-h-screen flex flex-col items-center justify-center text-center px-6">
+  <h1 class="text-5xl font-bold mb-4">LedgerPilot 🚀</h1>
+  <p class="text-gray-300 mb-8 max-w-xl">
+    AI-powered bookkeeping co-pilot. Track income, expenses & taxes in one place.
   </p>
 
-  <!-- Simple Waitlist Form -->
-  <form class="flex flex-col sm:flex-row gap-3 justify-center mb-6" onsubmit="alert('Thanks! You’re on the waitlist.'); return false;">
-    <input type="email" placeholder="Work email" class="px-4 py-3 rounded-xl text-black w-full sm:w-80" required />
-    <button type="submit" class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700">Join Waitlist</button>
+  <form onsubmit="alert('Thanks! You are on the waitlist!'); return false;" 
+        class="flex flex-col sm:flex-row gap-3 justify-center mb-6 w-full max-w-md">
+    <input type="email" placeholder="Work email" required
+           class="px-4 py-3 rounded-xl text-black flex-1"/>
+    <button type="submit" class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700">
+      Join Waitlist
+    </button>
   </form>
 
-  <div class="text-gray-400 text-sm mb-16 text-center">No spam. 1–2 emails/month with updates.</div>
-
-  <!-- Features -->
-  <div class="grid md:grid-cols-3 gap-6 max-w-5xl w-full">
-    <div class="rounded-2xl bg-white/5 border border-white/10 p-6">
-      <h3 class="text-xl font-semibold">Auto-reconcile & file</h3>
-      <p class="mt-2 text-gray-300">Bank feeds, invoice matching, one-click GST/e-invoice export.</p>
-    </div>
-    <div class="rounded-2xl bg-white/5 border border-white/10 p-6">
-      <h3 class="text-xl font-semibold">AI document intake</h3>
-      <p class="mt-2 text-gray-300">Parse PDFs & scans. Extract line items automatically.</p>
-    </div>
-    <div class="rounded-2xl bg-white/5 border border-white/10 p-6">
-      <h3 class="text-xl font-semibold">Close faster</h3>
-      <p class="mt-2 text-gray-300">Variance explainers, journal suggestions, month-end checklists.</p>
-    </div>
-  </div>
-
-  <footer class="mt-16 text-gray-400 text-sm text-center">© 2025 LedgerPilot — All rights reserved.</footer>
+  <footer class="mt-16 text-gray-400 text-sm">© 2025 LedgerPilot — All rights reserved.</footer>
 </body>
 </html>
